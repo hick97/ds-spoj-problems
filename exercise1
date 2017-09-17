@@ -1,0 +1,63 @@
+import java.util.*;
+
+public class exercicioSpoj1 {
+    static int n;
+    static int m;
+   
+    public static int[] naoPertence = new int[200];
+    
+    
+    
+    public static void main(String args[]){
+        int contador;
+        
+        Scanner sc = new Scanner(System.in);
+        int k;
+        // Recebe o primeiro array:
+        n = sc.nextInt(); 
+        int[] integerS = new int[n];
+        
+        for(k=0;k<n;k++){
+            integerS[k] = sc.nextInt();
+        }
+        // Recebe o segundo array:
+        m = sc.nextInt();
+        int[] integerQ = new int[m];
+         
+        for(k=0;k<m;k++){
+            integerQ[k] = sc.nextInt();
+        }
+        
+        // Verficando os elementos não pertencentes ao segundo array...
+        contador = Compara(integerS,integerQ,n,m);
+      
+        
+        for(k=0;k<contador;k++){
+            System.out.printf("%d ", naoPertence[k]);
+           
+            
+        }
+    }
+    //Função que verifica se o elemento do primeiro array está no segundo:
+    public static int Compara(int a[], int b[], int tam1, int tam2){
+        int contador=0,i,j,aux;
+        
+        for(i=0;i<tam1;i++){
+            aux = 0;
+            for(j=0;j<tam2;j++){
+                
+                if(a[i]== b[j]){
+                    aux++;
+                }
+            }
+            if(aux == 0){
+                naoPertence[contador] = a[i];
+                contador++;
+             
+            }
+        }
+        return contador;
+       
+    }
+    
+}
