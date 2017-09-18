@@ -4,10 +4,7 @@
  * and open the template in the editor.
  */
 import java.util.*;
-/**
- *
- * @author Ze Carlos
- */
+
 public class exercicioSpoj1 {
     static int n;
     static int m;
