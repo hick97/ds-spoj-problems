@@ -1,16 +1,7 @@
 
 import java.util.Scanner;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author Ze Carlos
- */
 public class Adaindex {
     
        
@@ -72,12 +63,12 @@ public class Adaindex {
         }
         
         //Metodo que permite varrer a lista e verificar quantos tem o mesmo prefixo:
-        public int quantosComecamEm(String p){
+        public int quantosComecamEm(String prefix){
             int contador = 0;
             No aux = cabeca;
             
             for(int i = 0; i <= tamanho; i++){
-                if(aux.getConteudo().startsWith(p)){
+                if(aux.getConteudo().startsWith(prefix)){
                     contador++;
                 }
                 aux = aux.getProx();
